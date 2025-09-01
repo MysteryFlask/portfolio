@@ -1,0 +1,6 @@
+body {
+    font-family: 'Coming Soon', cursive;
+    transition: background 1s ease;
+    background: #3498db;
+    height: 1000px;
+}
