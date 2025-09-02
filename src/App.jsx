@@ -14,22 +14,22 @@ function App() {
       </nav>
       {currentPage === 1 &&
         <div className="page home">
-          <h1>Home</h1>
+          <a>Home</a>
         </div>
       }
       {currentPage === 2 &&
         <div className="page about">
-          <h1>About</h1>
+          <a>About</a>
         </div>
       }
       {currentPage === 3 &&
         <div className="page projects">
-          <h1>Projects</h1>
+          <a>Projects</a>
         </div>
       }
       {currentPage === 4 &&
         <div className="page links">
-          <h1>Links</h1>
+          <a>Links</a>
         </div>
       }
     </>
