@@ -1,31 +1,37 @@
-import React, { useEffect, useState } from 'react'
+import { useState } from 'react'
 import './style.css'
 
 function App() {
-  const [offset, setOffset] = useState(0);
-
-  useEffect(() => {
-        const onScroll = () => setOffset(window.scrollY);
-        window.removeEventListener('scroll', onScroll);
-        window.addEventListener('scroll', onScroll, { passive: true });
-        return () => window.removeEventListener('scroll', onScroll);
-  }, []);
-
-  console.log(offset)
-
-  const getBackgroundColor = () => {
-    if (offset >= 150) return "red";
-    if (offset >= 100) return "green";
-    if (offset >= 50) return "blue";
-    if (offset >= 0) return "orange";
-  }
-
-  useEffect(() => {
-    document.body.style.backgroundColor = getBackgroundColor()
-  }, [offset])
+  const [currentPage, setCurrentPage] = useState(1)
 
   return (
     <>
+      <nav className="navbar">
+        <a onClick={() => setCurrentPage(1)}>Home</a>
+        <a onClick={() => setCurrentPage(2)}>About</a>
+        <a onClick={() => setCurrentPage(3)}>Projects</a>
+        <a onClick={() => setCurrentPage(4)}>Links</a>
+      </nav>
+      {currentPage === 1 &&
+        <div className="page home">
+          <h1>Home</h1>
+        </div>
+      }
+      {currentPage === 2 &&
+        <div className="page about">
+          <h1>About</h1>
+        </div>
+      }
+      {currentPage === 3 &&
+        <div className="page projects">
+          <h1>Projects</h1>
+        </div>
+      }
+      {currentPage === 4 &&
+        <div className="page links">
+          <h1>Links</h1>
+        </div>
+      }
     </>
   )
 }
