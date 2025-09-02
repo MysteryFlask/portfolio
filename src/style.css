@@ -1,8 +1,9 @@
 body {
   margin: 0;
-  font-family: Calibri ,Candara ,Segoe ,Segoe UI ,Optima ,Arial ,sans-serif;
+  font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;
   color: white;
-  background-color: black;
+  background: linear-gradient(to right, purple, blue);;
+  overflow: hidden; 
 }
 
 .navbar {
@@ -11,8 +12,9 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  padding: 20px;
+  padding: 20px 0;
   background: rgba(0,0,0,0.7);
+  z-index: 100;
 }
 
 .navbar a {
@@ -36,18 +38,9 @@ body {
   align-items: center;
 }
 
-.home {
-  background-color: red;
-}
-
-.about {
-  background-color: orange;
-}
-
-.projects {
-  background-color: yellow;
-}
-
-.links {
-  background-color: green;
+.pages {
+  width: 400vw;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  transition: transform 0.5s ease-in-out;
 }

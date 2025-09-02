@@ -12,26 +12,20 @@ function App() {
         <a onClick={() => setCurrentPage(3)}>Projects</a>
         <a onClick={() => setCurrentPage(4)}>Links</a>
       </nav>
-      {currentPage === 1 &&
+      <div className='pages' style={{ transform: `translateX(-${(currentPage - 1) * 100}vw)` }}>
         <div className="page home">
           <a>Home</a>
         </div>
-      }
-      {currentPage === 2 &&
         <div className="page about">
           <a>About</a>
         </div>
-      }
-      {currentPage === 3 &&
         <div className="page projects">
           <a>Projects</a>
         </div>
-      }
-      {currentPage === 4 &&
         <div className="page links">
           <a>Links</a>
         </div>
-      }
+      </div>
     </>
   )
 }
