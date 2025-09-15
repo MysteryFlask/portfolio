@@ -61,11 +61,11 @@ p {
   border-radius: 10px;
   padding: 20px;
   max-width: 500px;
-  text-align: center;
   font-size: 20px;
   color: white;
   transition: transform 0.3s ease-in-out;
   text-align: left;
+  height: fit-content;
 }
 
 .box:hover {
@@ -78,4 +78,41 @@ p {
   grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 20px;
   grid-row-gap: 20px;
+}
+
+.title {
+  font-size: 20px;
+  margin: 0 0 10px 0;
+}
+
+.links, .stack {
+  display: flex;
+  justify-content: space-around;
+}
+
+.links {
+  gap: 10px;
+}
+
+.linkicon {
+  cursor: pointer;
+  justify-self: center;
+}
+
+.aboutboxes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+
+.text {
+  grid-area: 1 / 1 / 2 / 3;
+}
+
+.projectimage {
+  width: 300px;
+  height: 200px;
+  cursor: pointer;
 }
